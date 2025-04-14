@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer components {
+  .highlighted-word {
+    @apply bg-primary/20 rounded px-1 cursor-pointer transition-colors hover:bg-primary/30;
+  }
+  
+  .selected-word {
+    @apply bg-primary text-white rounded px-1;
+  }
+} 
